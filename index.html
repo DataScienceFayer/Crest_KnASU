@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Крестики-нолики</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Занимает всю высоту видимой области экрана */
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 150px); /* Увеличенный размер ячеек */
+            grid-gap: 15px; /* Увеличенный интервал между ячейками */
+        }
+
+        .cell {
+            border: 2px solid #333;
+            padding: 30px; /* Увеличенные внутренние отступы */
+            font-size: 3em; /* Увеличенный размер шрифта */
+            cursor: pointer;
+            background-color: white;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center; /* Выравнивание текста по вертикали по центру */
+            justify-content: center; /* Выравнивание текста по горизонтали по центру */
+        }
+
+        .cell:hover {
+            background-color: #ddd;
+        }
+
+        #easterEgg {
+            margin-top: 30px;
+            display: none;
+            font-style: italic;
+            color: #555;
+        }
+
+        #easterEggImage {
+            display: none;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="gameBoard" class="grid"></div>
+    <p id="easterEgg">Создано студентом 4 курса факультета компьютерных технологий В.В.Покровский 2023 год.</p>
+    <img id="easterEggImage" src="KnASU.jpg" style="display: none; width: 300px; margin: auto;"/>
+    <audio id="easterEggMusic" src="Gandalf.mp3"></audio>
+    <script src="game.js"></script>
+</body>
+</html>
